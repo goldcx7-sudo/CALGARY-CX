@@ -13,15 +13,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section>
     <div class="container--narrow">
+
+      <!-- Profile photo + bio side by side -->
+      <div style="display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;margin-bottom:3rem;">
+        <div>
+          <img
+            src="/jp-photo.jpg"
+            alt="JP Sivasubramaniam — Calgary CX"
+            style="width:100%;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12);display:block;"
+          />
+          <div style="margin-top:1rem;text-align:center;">
+            <a href="https://www.linkedin.com/in/jpsivasubramaniam/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem;">
+              Connect on LinkedIn →
+            </a>
+          </div>
+        </div>
+        <div class="prose" style="margin:0;max-width:100%;">
+          <h2 style="margin-top:0;">Who's Behind This</h2>
+          <p>I'm JP Sivasubramaniam — a results-driven CX and CCaaS leader with a track record of building and scaling high-performing global practices that deliver enterprise-grade contact center and unified communications solutions.</p>
+          <p>Over my career I've led complex, large-scale transformations across telecom, banking, retail, utilities, and public sector organizations across North America — including multi-million-dollar programmes and migrations involving 12,000+ agent environments. I've worked across the full spectrum: strategy, delivery, managed services, and AI-driven platform deployment.</p>
+          <p>My hands-on experience spans AI-driven CX platforms including Parloa, Sierra, Google CCAI (GECX), and Microsoft Copilot — deploying conversational AI, automation, and next-generation voice and digital experiences that drive higher containment, improved customer satisfaction, and cost optimization.</p>
+          <p>Calgary CX is where I share what I've learned — without a vendor agenda, without sponsored positioning, and without the sanitized language of analyst reports. Just honest, practitioner-level analysis.</p>
+        </div>
+      </div>
+
       <div class="prose">
-
-        <h2>Who's Behind This</h2>
-        <p>I'm JP Sivasubramaniam — a results-driven CX and CCaaS leader with a track record of building and scaling high-performing global practices that deliver enterprise-grade contact center and unified communications solutions.</p>
-        <p>Over my career I've led complex, large-scale transformations across telecom, banking, retail, utilities, and public sector organizations across North America — including multi-million-dollar programmes and migrations involving 12,000+ agent environments. I've worked across the full spectrum: strategy, delivery, managed services, and AI-driven platform deployment.</p>
-        <p>My hands-on experience spans AI-driven CX platforms including Parloa, Sierra, Google CCAI (GECX), and Microsoft Copilot — deploying conversational AI, automation, and next-generation voice and digital experiences that drive higher containment, improved customer satisfaction, and cost optimization.</p>
-        <p>Calgary CX is where I share what I've learned — without a vendor agenda, without sponsored positioning, and without the sanitized language of analyst reports. Just honest, practitioner-level analysis.</p>
-        <p style="margin-top:0.5rem;"><a href="https://www.linkedin.com/in/jpsivasubramaniam/" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn →</a></p>
-
         <h2>What Calgary CX Covers</h2>
         <p>This platform publishes articles and videos across the enterprise CX landscape:</p>
         <ul>
@@ -34,8 +50,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h2>Who This Is For</h2>
         <p>Calgary CX is written for CX leaders, contact center operators, IT and procurement teams evaluating platforms, and anyone navigating the increasingly complex intersection of AI and enterprise customer service. Whether you're a CX director planning a CCaaS migration, a vendor trying to understand how practitioners actually evaluate your product, or an operations manager looking for a cleaner mental model for AI agent deployment — this is for you.</p>
-
       </div>
+
     </div>
   </section>
 
@@ -49,5 +65,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </div>
+
+  <style>
+    @media (max-width: 640px) {
+      .about-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
 
 </BaseLayout>
