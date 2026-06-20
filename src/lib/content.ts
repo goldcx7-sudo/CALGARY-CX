@@ -30,7 +30,7 @@ export function getAllArticles(): Article[] {
         category: data.category,
         categoryLabel: data.categoryLabel,
         readTime: data.readTime,
-        author: data.author ?? 'Calgary CX Editorial',
+        author: data.author ?? 'JP Sivasubramaniam',
         featured: data.featured ?? false,
         content,
       } as Article;
@@ -48,8 +48,8 @@ export interface Video {
   title: string;
   description: string;
   pubDate: Date;
-  youtubeId: string;       // just the YouTube video ID e.g. "dQw4w9WgXcQ"
-  duration: string;        // e.g. "12:34"
+  youtubeId: string;
+  duration: string;
   category: string;
   categoryLabel: string;
   featured: boolean;
@@ -86,12 +86,11 @@ export function getVideoBySlug(slug: string) {
 
 // ── Categories ────────────────────────────────────────────
 export const CATEGORIES = [
-  { slug: 'ccaas',      label: 'CCaaS',                 description: 'Cloud contact center platforms, migrations, and vendor evaluations.' },
-  { slug: 'cx-ai',      label: 'CX AI',                 description: 'Artificial intelligence applied to customer experience functions.' },
-  { slug: 'ai-agents',  label: 'AI Agents',             description: 'Autonomous AI agents for voice and digital customer interactions.' },
-  { slug: 'wfo',        label: 'Workforce Optimization', description: 'WFM, QM, analytics, and agent performance management.' },
-  { slug: 'strategy',   label: 'CX Strategy',           description: 'Thought leadership on CX operating models and leadership.' },
-  { slug: 'ops',        label: 'CX Operations',         description: 'Day-to-day contact center operations and managed services.' },
+  { slug: 'ccaas',            label: 'CCaaS',                      description: 'Cloud contact center platforms, migrations, and vendor evaluations.' },
+  { slug: 'cx-ai',            label: 'CX AI',                      description: 'Artificial intelligence applied to customer experience functions.' },
+  { slug: 'ai-agents',        label: 'AI Agents',                  description: 'Autonomous AI agents for voice and digital customer interactions.' },
+  { slug: 'wfo',              label: 'Workforce Optimization',      description: 'WFM, QM, analytics, and agent performance management.' },
+  { slug: 'cx-strategy-ops',  label: 'CX Strategy & Operations',   description: 'Operating model design, QBR reform, managed services, vendor management, and strategic decisions facing CX leaders.' },
 ];
 
 // ── Helpers ───────────────────────────────────────────────
