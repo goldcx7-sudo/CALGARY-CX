@@ -223,3 +223,8 @@ section { padding: 5rem 0; }
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
+/* ── Logo byline ── */
+.logo-text-wrap { display: flex; flex-direction: column; line-height: 1; }
+.logo-byline { font-family: var(--ff-body); font-size: 0.65rem; font-weight: 400; color: var(--text-3); letter-spacing: 0.04em; margin-top: 2px; }
+.site-footer .logo-byline { color: rgba(255,255,255,0.35); }
+
