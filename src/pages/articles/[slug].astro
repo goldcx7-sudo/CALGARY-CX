@@ -13,6 +13,10 @@ if (!article) return Astro.redirect('/articles');
 
 const htmlContent = marked.parse(article.content);
 const related = getAllArticles().filter(a => a.slug !== slug && a.category === article.category).slice(0, 3);
+
+const frontmatter = article as any;
+const heroImage = frontmatter.heroImage ?? null;
+const heroImageAlt = frontmatter.heroImageAlt ?? article.title;
 ---
 <BaseLayout title={article.title} description={article.description} article={true}>
 
@@ -25,7 +29,7 @@ const related = getAllArticles().filter(a => a.slug !== slug && a.category === a
       <h1>{article.title}</h1>
       <p class="lead">{article.description}</p>
       <div class="article-byline">
-        <div class="byline-avatar">CX</div>
+        <div class="byline-avatar">JP</div>
         <div class="byline-info">
           <span class="byline-name">{article.author}</span>
           <span class="byline-meta">{formatDate(article.pubDate)}</span>
@@ -33,6 +37,17 @@ const related = getAllArticles().filter(a => a.slug !== slug && a.category === a
       </div>
     </div>
   </div>
+
+  {heroImage && (
+    <div style="max-width:720px;margin:0 auto;padding:2.5rem 1.5rem 0;">
+      <img
+        src={heroImage}
+        alt={heroImageAlt}
+        style="width:100%;border-radius:10px;display:block;box-shadow:0 4px 24px rgba(0,0,0,0.12);"
+        loading="eager"
+      />
+    </div>
+  )}
 
   <section>
     <div class="container--narrow">
