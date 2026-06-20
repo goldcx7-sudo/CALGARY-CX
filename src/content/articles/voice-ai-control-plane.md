@@ -7,6 +7,8 @@ categoryLabel: "AI Agents"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: true
+heroImage: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&q=80"
+heroImageAlt: "Futuristic AI network representing Voice AI as the control plane of customer experience"
 ---
 
 For years, enterprise CX was clearly divided:
