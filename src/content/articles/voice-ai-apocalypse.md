@@ -7,6 +7,8 @@ categoryLabel: "AI Agents"
 readTime: "5 min read"
 author: "JP Sivasubramaniam"
 featured: false
+heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
+heroImageAlt: "AI technology overload — too many choices, too much noise"
 ---
 
 I went to buy a washer and dryer recently and the salesperson told me: "This one has got AI."
