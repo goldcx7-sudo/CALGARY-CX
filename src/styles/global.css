@@ -98,9 +98,9 @@ section { padding: 5rem 0; }
 .category-pill.cat-ccaas     { background: #e8f0fe; color: #1a56db; }
 .category-pill.cat-cx-ai     { background: #fce8e8; color: #c0392b; }
 .category-pill.cat-wfo       { background: #e6f4ea; color: #188038; }
-.category-pill.cat-strategy  { background: #fef3e2; color: #b45309; }
+.category-pill.cat-cx-strategy-ops { background: #fef3e2; color: #b45309; }
 .category-pill.cat-ai-agents { background: #f0e8fe; color: #6b21a8; }
-.category-pill.cat-ops       { background: #e8f5fc; color: #0369a1; }
+
 
 /* ── Article cards ── */
 .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
@@ -227,4 +227,3 @@ section { padding: 5rem 0; }
 .logo-text-wrap { display: flex; flex-direction: column; line-height: 1; }
 .logo-byline { font-family: var(--ff-body); font-size: 0.65rem; font-weight: 400; color: var(--text-3); letter-spacing: 0.04em; margin-top: 2px; }
 .site-footer .logo-byline { color: rgba(255,255,255,0.35); }
-
