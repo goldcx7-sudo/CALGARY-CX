@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Newsletter — Calgary CX" description="Subscribe to the Calgary CX newsletter for independent analysis on CCaaS, CX AI, and contact center operations.">
+  <div class="newsletter-band" style="min-height:60vh;display:flex;align-items:center;">
+    <div class="newsletter-inner" style="width:100%;">
+      <h1 style="color:white;font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem;">CX Intelligence, Straight to Your Inbox</h1>
+      <p style="font-size:1.05rem;margin-bottom:2.5rem;">A periodic newsletter covering CCaaS migrations, CX AI developments, workforce optimization, and contact center operations. Written for practitioners, not vendor ecosystems.</p>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:2rem;max-width:480px;margin:0 auto 2rem;">
+        <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-bottom:1.25rem;">What to expect</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;text-align:left;">
+          {['Honest takes on CCaaS platform developments','CX AI and agent deployment analysis','Workforce and operations insights','No sponsored content, no vendor bias'].map(item => (
+            <li style="font-size:0.9rem;color:rgba(255,255,255,0.65);display:flex;gap:0.75rem;align-items:flex-start;">
+              <span style="color:#c9943a;flex-shrink:0;">✓</span>{item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" />
+        <button class="btn btn-primary">Subscribe Free</button>
+      </div>
+      <p class="newsletter-note" style="margin-top:1.25rem;">No spam. Unsubscribe anytime. <a href="/disclaimer" style="color:rgba(255,255,255,0.45);text-decoration:underline;">Disclaimer</a>.<br/><em style="font-size:0.72rem;display:block;margin-top:0.35rem;">Newsletter integration coming soon — placeholder for now.</em></p>
+    </div>
+  </div>
+</BaseLayout>

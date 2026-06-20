@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllArticles, CATEGORIES, formatDate } from '../../lib/content';
+const articles = getAllArticles();
+---
+<BaseLayout title="Articles" description="All articles from Calgary CX — covering CCaaS, CX AI, AI Agents, WFO, and Customer Service Operations.">
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-eyebrow">The Archive</div>
+      <h1>All Articles</h1>
+      <p class="lead" style="max-width:520px;">Independent analysis on enterprise customer experience. {articles.length} articles and counting.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+        <a href="/articles" class="category-pill" style="background:var(--ink);color:white;">All</a>
+        {CATEGORIES.map(cat => <a href={`/categories/${cat.slug}`} class={`category-pill cat-${cat.slug}`}>{cat.label}</a>)}
+      </div>
+      <div class="article-grid">
+        {articles.map(article => (
+          <article class="article-card">
+            <div class="card-body">
+              <div class="card-meta">
+                <a href={`/categories/${article.category}`} class={`category-pill cat-${article.category}`}>{article.categoryLabel}</a>
+                <span class="card-date">{formatDate(article.pubDate)}</span>
+              </div>
+              <h3 class="card-title">{article.title}</h3>
+              <p class="card-excerpt">{article.description}</p>
+            </div>
+            <div class="card-footer">
+              <a href={`/articles/${article.slug}`} class="read-link">Read article <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l8 8-8 8-1.4-1.4L12.2 9H0V7h12.2L6.6 1.4z"/></svg></a>
+              <span class="read-time">{article.readTime}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

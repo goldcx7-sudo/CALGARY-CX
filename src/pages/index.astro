@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllArticles, getAllVideos, CATEGORIES, formatDate, youtubeThumbnail } from '../lib/content';
+const articles = getAllArticles();
+const videos = getAllVideos();
+const featured = articles.find(a => a.featured) ?? articles[0];
+---
+<BaseLayout title="Calgary CX" description="Independent insights on CX, CCaaS, AI Agents, and Customer Service Operations from Calgary.">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow animate-up">Independent CX Thought Leadership</div>
+        <h1 class="animate-up delay-1">The enterprise CX conversation, from <em>Calgary</em>.</h1>
+        <p class="lead animate-up delay-2">Independent insights on CX, CCaaS, AI Agents, and Customer Service Operations. No vendor funding. No sponsored content. Just honest analysis.</p>
+        <div class="hero-actions animate-up delay-3">
+          <a href="/articles" class="btn btn-primary">Read Articles <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l8 8-8 8-1.4-1.4L12.2 9H0V7h12.2L6.6 1.4z"/></svg></a>
+          <a href="/videos" class="btn btn-ghost">Watch Videos</a>
+        </div>
+      </div>
+      {featured && (
+        <a href={`/articles/${featured.slug}`} class="hero-featured animate-up delay-2">
+          <div class="hero-featured-label">Featured Article</div>
+          <div class="hero-featured-title">{featured.title}</div>
+          <div class="hero-featured-meta"><span>{formatDate(featured.pubDate)}</span><span>{featured.readTime}</span></div>
+          <div class="hero-featured-link">Read article <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l8 8-8 8-1.4-1.4L12.2 9H0V7h12.2L6.6 1.4z"/></svg></div>
+        </a>
+      )}
+    </div>
+  </section>
+
+  <div class="category-strip">
+    <div class="category-strip-inner">
+      {CATEGORIES.map(cat => {
+        const count = articles.filter(a => a.category === cat.slug).length;
+        return (
+          <a href={`/categories/${cat.slug}`} class="category-strip-item">
+            <span class="label">{cat.label}</span>
+            <span class="count">{count} article{count !== 1 ? 's' : ''}</span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div><div class="section-eyebrow">Latest</div><h2>Recent Articles</h2></div>
+        <a href="/articles" class="btn btn-outline">View All</a>
+      </div>
+      <div class="article-grid">
+        {articles.slice(0, 6).map(article => (
+          <article class="article-card">
+            <div class="card-body">
+              <div class="card-meta">
+                <a href={`/categories/${article.category}`} class={`category-pill cat-${article.category}`}>{article.categoryLabel}</a>
+                <span class="card-date">{formatDate(article.pubDate)}</span>
+              </div>
+              <h3 class="card-title">{article.title}</h3>
+              <p class="card-excerpt">{article.description}</p>
+            </div>
+            <div class="card-footer">
+              <a href={`/articles/${article.slug}`} class="read-link">Read article <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l8 8-8 8-1.4-1.4L12.2 9H0V7h12.2L6.6 1.4z"/></svg></a>
+              <span class="read-time">{article.readTime}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {videos.length > 0 && (
+    <section style="background:var(--mist);padding:5rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <div><div class="section-eyebrow">Watch</div><h2>Latest Videos</h2></div>
+          <a href="/videos" class="btn btn-outline">All Videos</a>
+        </div>
+        <div class="video-grid">
+          {videos.slice(0, 3).map(video => (
+            <a href={`/videos/${video.slug}`} class="video-card">
+              <div class="video-thumb">
+                <img src={youtubeThumbnail(video.youtubeId)} alt={video.title} loading="lazy" />
+                <div class="video-play-btn">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="video-body">
+                <div class="video-meta">
+                  <span class={`category-pill cat-${video.category}`}>{video.categoryLabel}</span>
+                  {video.duration && <span class="video-duration">{video.duration}</span>}
+                </div>
+                <div class="video-title">{video.title}</div>
+                <p class="video-desc">{video.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="newsletter-band">
+    <div class="newsletter-inner">
+      <h2>CX Intelligence, Straight to Your Inbox</h2>
+      <p>A periodic newsletter covering CCaaS, CX AI, and contact center operations. No noise, no vendor pitches. Unsubscribe anytime.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" />
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+      <p class="newsletter-note">We respect your privacy. Read our <a href="/disclaimer" style="color:rgba(255,255,255,0.5);text-decoration:underline;">disclaimer</a>.</p>
+    </div>
+  </div>
+
+</BaseLayout>

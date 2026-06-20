@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllArticles, getArticleBySlug, formatDate } from '../../lib/content';
+import { marked } from 'marked';
+
+export async function getStaticPaths() {
+  return getAllArticles().map(a => ({ params: { slug: a.slug } }));
+}
+
+const { slug } = Astro.params;
+const article = getArticleBySlug(slug!);
+if (!article) return Astro.redirect('/articles');
+
+const htmlContent = marked.parse(article.content);
+const related = getAllArticles().filter(a => a.slug !== slug && a.category === article.category).slice(0, 3);
+---
+<BaseLayout title={article.title} description={article.description} article={true}>
+
+  <div class="article-hero">
+    <div class="article-hero-inner">
+      <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-bottom:0.5rem;">
+        <a href={`/categories/${article.category}`} class={`category-pill cat-${article.category}`}>{article.categoryLabel}</a>
+        <span style="font-size:0.78rem;color:rgba(255,255,255,0.35);font-family:var(--ff-mono);">{article.readTime}</span>
+      </div>
+      <h1>{article.title}</h1>
+      <p class="lead">{article.description}</p>
+      <div class="article-byline">
+        <div class="byline-avatar">CX</div>
+        <div class="byline-info">
+          <span class="byline-name">{article.author}</span>
+          <span class="byline-meta">{formatDate(article.pubDate)}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container--narrow">
+      <div class="prose" set:html={htmlContent} />
+      <hr class="rule" style="margin:3rem 0;" />
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <a href="/articles" class="btn btn-outline"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 16L0 8l8-8 1.4 1.4L3.8 7H16v2H3.8l5.6 5.6z"/></svg> All Articles</a>
+        <a href={`/categories/${article.category}`} class={`category-pill cat-${article.category}`}>{article.categoryLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section style="background:var(--mist);padding:4rem 0;">
+      <div class="container">
+        <div class="section-eyebrow">Keep Reading</div>
+        <h2 style="margin-bottom:2rem;">More in {article.categoryLabel}</h2>
+        <div class="article-grid">
+          {related.map(rel => (
+            <article class="article-card">
+              <div class="card-body">
+                <div class="card-meta"><span class="card-date">{formatDate(rel.pubDate)}</span></div>
+                <h3 class="card-title">{rel.title}</h3>
+                <p class="card-excerpt">{rel.description}</p>
+              </div>
+              <div class="card-footer">
+                <a href={`/articles/${rel.slug}`} class="read-link">Read article <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l8 8-8 8-1.4-1.4L12.2 9H0V7h12.2L6.6 1.4z"/></svg></a>
+                <span class="read-time">{rel.readTime}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+</BaseLayout>

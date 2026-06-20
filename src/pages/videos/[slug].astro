@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllVideos, getVideoBySlug, formatDate, youtubeEmbed, youtubeThumbnail } from '../../lib/content';
+
+export async function getStaticPaths() {
+  return getAllVideos().map(v => ({ params: { slug: v.slug } }));
+}
+
+const { slug } = Astro.params;
+const video = getVideoBySlug(slug!);
+if (!video) return Astro.redirect('/videos');
+
+const related = getAllVideos().filter(v => v.slug !== slug && v.category === video.category).slice(0, 3);
+---
+<BaseLayout title={video.title} description={video.description} ogImage={youtubeThumbnail(video.youtubeId)}>
+
+  <div class="article-hero">
+    <div class="article-hero-inner">
+      <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-bottom:0.5rem;">
+        <a href={`/categories/${video.category}`} class={`category-pill cat-${video.category}`}>{video.categoryLabel}</a>
+        {video.duration && <span style="font-size:0.78rem;color:rgba(255,255,255,0.35);font-family:var(--ff-mono);">{video.duration}</span>}
+      </div>
+      <h1>{video.title}</h1>
+      <p class="lead">{video.description}</p>
+      <div class="article-byline">
+        <div class="byline-info">
+          <span class="byline-meta">{formatDate(video.pubDate)}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container--narrow">
+      <div class="video-embed-wrap" style="margin-bottom:3rem;">
+        <iframe
+          src={youtubeEmbed(video.youtubeId)}
+          title={video.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+
+      <hr class="rule" style="margin:2rem 0;" />
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <a href="/videos" class="btn btn-outline"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 16L0 8l8-8 1.4 1.4L3.8 7H16v2H3.8l5.6 5.6z"/></svg> All Videos</a>
+        <a href={`/categories/${video.category}`} class={`category-pill cat-${video.category}`}>{video.categoryLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section style="background:var(--mist);padding:4rem 0;">
+      <div class="container">
+        <div class="section-eyebrow">Watch Next</div>
+        <h2 style="margin-bottom:2rem;">More in {video.categoryLabel}</h2>
+        <div class="video-grid">
+          {related.map(rel => (
+            <a href={`/videos/${rel.slug}`} class="video-card">
+              <div class="video-thumb">
+                <img src={youtubeThumbnail(rel.youtubeId)} alt={rel.title} loading="lazy" />
+                <div class="video-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              </div>
+              <div class="video-body">
+                <div class="video-meta">
+                  <span class={`category-pill cat-${rel.category}`}>{rel.categoryLabel}</span>
+                  {rel.duration && <span class="video-duration">{rel.duration}</span>}
+                </div>
+                <div class="video-title">{rel.title}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+</BaseLayout>

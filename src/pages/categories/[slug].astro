@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllArticles, CATEGORIES, formatDate } from '../../lib/content';
+
+export async function getStaticPaths() {
+  return CATEGORIES.map(cat => ({ params: { slug: cat.slug } }));
+}
+
+const { slug } = Astro.params;
+const category = CATEGORIES.find(c => c.slug === slug);
+const articles = getAllArticles().filter(a => a.category === slug);
+if (!category) return Astro.redirect('/categories');
+---
+<BaseLayout title={category.label} description={`Calgary CX articles on ${category.label}: ${category.description}`}>
+  <div class="page-hero">
+    <div class="container">
+      <div style="margin-bottom:1rem;">
+        <a href="/categories" style="font-size:0.85rem;color:var(--text-3);display:inline-flex;align-items:center;gap:0.4rem;">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 16L0 8l8-8 1.4 1.4L3.8 7H16v2H3.8l5.6 5.6z"/></svg> All Categories
+        </a>
+      </div>
+      <span class={`category-pill cat-${category.slug}`} style="margin-bottom:1rem;display:inline-flex;">{category.label}</span>
+      <h1>{category.label}</h1>
+      <p class="lead" style="max-width:520px;">{category.description}</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      {articles.length === 0 ? (
+        <div style="text-align:center;padding:4rem 0;">
+          <p style="color:var(--text-3);font-size:1.1rem;">No articles in this category yet. Check back soon.</p>
+          <a href="/articles" class="btn btn-outline" style="margin-top:1.5rem;">Browse All Articles</a>
+        </div>
+      ) : (
+        <div class="article-grid">
+          {articles.map(article => (
+            <article class="article-card">
+              <div class="card-body">
+                <div class="card-meta"><span class="card-date">{formatDate(article.pubDate)}</span><span class="read-time">{article.readTime}</span></div>
+                <h3 class="card-title">{article.title}</h3>
+                <p class="card-excerpt">{article.description}</p>
+              </div>
+              <div class="card-footer">
+                <a href={`/articles/${article.slug}`} class="read-link">Read article <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l8 8-8 8-1.4-1.4L12.2 9H0V7h12.2L6.6 1.4z"/></svg></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

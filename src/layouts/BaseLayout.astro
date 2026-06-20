@@ -1,0 +1,131 @@
+---
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  article?: boolean;
+}
+const {
+  title,
+  description = 'Independent insights on CX, CCaaS, AI Agents, and Customer Service Operations from Calgary.',
+  canonical,
+  ogImage = '/og-default.png',
+  article = false,
+} = Astro.props;
+const siteName = 'Calgary CX';
+const siteUrl = 'https://calgarycx.ca';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/articles', label: 'Articles' },
+  { href: '/videos', label: 'Videos' },
+  { href: '/categories', label: 'Categories' },
+  { href: '/about', label: 'About' },
+];
+---
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d0f14" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta property="og:type" content={article ? 'article' : 'website'} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="en_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 1.5C5.96 1.5 3.5 3.96 3.5 7c0 2.1 1.17 3.93 2.9 4.88L5.5 14h7l-.9-2.12A5.49 5.49 0 0 0 14.5 7c0-3.04-2.46-5.5-5.5-5.5zm0 2a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zm-2 11h4l.5 1.5H6.5L7 14.5z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Calgary <span>CX</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+        {navLinks.map(link => (
+          <a href={link.href} class={currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) ? 'active' : ''}>
+            {link.label}
+          </a>
+        ))}
+        <a href="/newsletter" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+  <main><slot /></main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="site-logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1.5C5.96 1.5 3.5 3.96 3.5 7c0 2.1 1.17 3.93 2.9 4.88L5.5 14h7l-.9-2.12A5.49 5.49 0 0 0 14.5 7c0-3.04-2.46-5.5-5.5-5.5zm0 2a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zm-2 11h4l.5 1.5H6.5L7 14.5z"/>
+              </svg>
+            </div>
+            <span class="logo-text">Calgary <span>CX</span></span>
+          </a>
+          <p>Independent insights on CX, CCaaS, AI Agents, and Customer Service Operations. Based in Calgary, writing for the North American enterprise market.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Content</h4>
+          <ul>
+            <li><a href="/articles">All Articles</a></li>
+            <li><a href="/videos">Videos</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/categories/ccaas">CCaaS</a></li>
+            <li><a href="/categories/cx-ai">CX AI</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/newsletter">Newsletter</a></li>
+            <li><a href="/disclaimer">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© {new Date().getFullYear()} Calgary CX — Calgary, Alberta, Canada 🇨🇦</span>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('siteNav');
+    toggle?.addEventListener('click', () => {
+      const isOpen = nav?.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+</body>
+</html>
