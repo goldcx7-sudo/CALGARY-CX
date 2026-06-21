@@ -81,7 +81,7 @@ The job title may still say Workforce Manager. The actual function is Workforce 
 
 **5. WFM will move upstream.** The best WFM teams will be involved in product decisions, channel design, and customer experience strategy — not just schedule production.
 
-## The Closing Thought
+## The Shift That Matters
 
 The future of WFM is no longer about managing people against forecasts.
 
