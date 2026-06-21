@@ -14,9 +14,9 @@ if (!article) return Astro.redirect('/articles');
 const htmlContent = marked.parse(article.content);
 const related = getAllArticles().filter(a => a.slug !== slug && a.category === article.category).slice(0, 3);
 
-const frontmatter = article as any;
-const heroImage = frontmatter.heroImage ?? null;
-const heroImageAlt = frontmatter.heroImageAlt ?? article.title;
+
+const heroImage = article.heroImage ?? null;
+const heroImageAlt = article.heroImageAlt ?? article.title;
 
 const siteUrl = 'https://calgarycx.ca';
 const articleUrl = `${siteUrl}/articles/${slug}`;
