@@ -7,6 +7,8 @@ categoryLabel: "CCaaS"
 readTime: "4 min read"
 author: "JP Sivasubramaniam"
 featured: false
+heroImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&q=80"
+heroImageAlt: "CCaaS industry news and contact center technology week in review"
 ---
 
 ## The Week in Numbers
