@@ -13,6 +13,8 @@ export interface Article {
   readTime: string;
   author: string;
   featured: boolean;
+  heroImage?: string;
+  heroImageAlt?: string;
   content: string;
 }
 
@@ -32,6 +34,8 @@ export function getAllArticles(): Article[] {
         readTime: data.readTime,
         author: data.author ?? 'JP Sivasubramaniam',
         featured: data.featured ?? false,
+        heroImage: data.heroImage ?? null,
+        heroImageAlt: data.heroImageAlt ?? null,
         content,
       } as Article;
     })
@@ -86,11 +90,11 @@ export function getVideoBySlug(slug: string) {
 
 // ── Categories ────────────────────────────────────────────
 export const CATEGORIES = [
-  { slug: 'ccaas',            label: 'CCaaS',                      description: 'Cloud contact center platforms, migrations, and vendor evaluations.' },
-  { slug: 'cx-ai',            label: 'CX AI',                      description: 'Artificial intelligence applied to customer experience functions.' },
-  { slug: 'ai-agents',        label: 'AI Agents',                  description: 'Autonomous AI agents for voice and digital customer interactions.' },
-  { slug: 'wfo',              label: 'Workforce Optimization',      description: 'WFM, QM, analytics, and agent performance management.' },
-  { slug: 'cx-strategy-ops',  label: 'CX Strategy & Operations',   description: 'Operating model design, QBR reform, managed services, vendor management, and strategic decisions facing CX leaders.' },
+  { slug: 'ccaas',           label: 'CCaaS',                    description: 'Cloud contact center platforms, migrations, and vendor evaluations.' },
+  { slug: 'cx-ai',           label: 'CX AI',                    description: 'Artificial intelligence applied to customer experience functions.' },
+  { slug: 'ai-agents',       label: 'AI Agents',                description: 'Autonomous AI agents for voice and digital customer interactions.' },
+  { slug: 'wfo',             label: 'Workforce Optimization',    description: 'WFM, QM, analytics, and agent performance management.' },
+  { slug: 'cx-strategy-ops', label: 'CX Strategy & Operations', description: 'Operating model design, QBR reform, managed services, vendor management, and strategic decisions facing CX leaders.' },
 ];
 
 // ── Helpers ───────────────────────────────────────────────
