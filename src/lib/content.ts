@@ -94,7 +94,7 @@ export const CATEGORIES = [
   { slug: 'cx-ai',           label: 'CX AI',                    description: 'Artificial intelligence applied to customer experience functions.' },
   { slug: 'ai-agents',       label: 'AI Agents',                description: 'Autonomous AI agents for voice and digital customer interactions.' },
   { slug: 'wfo',             label: 'Workforce Optimization',    description: 'WFM, QM, analytics, and agent performance management.' },
-  { slug: 'cx-strategy-ops', label: 'CX Strategy & Operations', description: 'Operating model design, QBR reform, managed services, vendor management, and strategic decisions facing CX leaders.' },
+  { slug: 'cx-strategy-ops', label: 'CX Strategy & Operations', description: 'Operating model design, managed services, vendor management, and strategic decisions facing CX leaders.' },
 ];
 
 // ── Helpers ───────────────────────────────────────────────
