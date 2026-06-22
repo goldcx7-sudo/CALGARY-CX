@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getAllArticles, getAllVideos, CATEGORIES, formatDate, youtubeThumbnail } from '../lib/content';
 const articles = getAllArticles();
-const videos = getAllVideos();
+const allVideos = getAllVideos();
+  const videos = allVideos.filter((v: any) => !v.comingSoon);
 const featured = articles.find(a => a.featured) ?? articles[0];
 ---
 <BaseLayout title="Calgary CX" description="Independent insights on CX, CCaaS, AI Agents, and Customer Service Operations from Calgary.">
