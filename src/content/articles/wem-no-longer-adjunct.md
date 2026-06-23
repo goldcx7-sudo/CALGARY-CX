@@ -23,6 +23,8 @@ Salesforce launched Agentforce Contact Center WEM with forecasting, scheduling, 
 
 [Read the Salesforce announcement](https://www.salesforce.com/blog/workforce-engagement-management-agentforce-contact-center/)
 
+That said, the all-in pricing of Salesforce WEM and CCaaS stack is drawing sharp reactions in the market. For many enterprises, the numbers may not pencil out. But the architectural direction is sound regardless of the price tag. WEM living natively inside the platform is where this market is going. The debate is not whether, it is which platform and at what cost.
+
 **Microsoft — June 22, 2026**
 
 Microsoft went generally available with WEM in Dynamics 365 Customer Service and Contact Center. The headline capability is the AI Agent Estimator, a planning tool that lets workforce managers forecast AI agent capacity alongside human staffing in a single model. They also announced MCP tooling that will surface WEM actions through Copilot, Teams, and mobile via natural language. Available June 30 on Enterprise and Premium SKUs.
