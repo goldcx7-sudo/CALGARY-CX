@@ -1,6 +1,6 @@
 ---
 title: "WEM: No Longer the Adjunct"
-description: "Salesforce, Microsoft, and Cisco have all announced native Workforce Engagement Management within weeks of each other. This is not a coincidence. Here is what it means for enterprise CX leaders and the specialist vendors caught in the middle."
+description: "Salesforce, Microsoft, and Cisco have all announced native Workforce Engagement Management within weeks of each other. This is not a coincidence. Here is what it means for CX leaders and consumers."
 pubDate: 2026-06-22
 category: "wfo"
 categoryLabel: "Workforce Optimization"
