@@ -53,9 +53,11 @@ Microsoft even named them directly, announcing adapters for Verint, Calabrio, an
 
 The specialists are not dead. For complex, large-scale contact center environments with deep WFM requirements, purpose-built tools still offer capabilities that native platform WEM does not yet match. But the conversation has shifted. The burden of proof is now on the specialist, not the platform.
 
-## Worth Noting: AWS Saw This Coming
+## Worth Noting: AWS Was Early on WFM
 
-Amazon Connect quietly built native forecasting, capacity planning, and scheduling into the platform starting in 2024 and kept expanding throughout 2025. No big announcement, no platform war framing, just steady capability additions inside the product. The announcements from Salesforce, Microsoft, and Cisco validate the direction AWS was already moving. They were early. The rest of the market just caught up.
+There is an important distinction worth making here. WFM, forecasting, scheduling, and capacity planning, is a subset of the broader WEM suite. Amazon Connect moved early on native WFM specifically, quietly adding forecasting, capacity planning, and scheduling to the platform from 2024 onwards with no big announcements and no platform war framing.
+
+That was a meaningful early signal. But what Salesforce, Microsoft, and Cisco announced is the full WEM layer, quality management, coaching, performance management, and agent engagement, built natively into the platform. AWS has not made an equivalent WEM announcement yet. The WFM move validated the direction. The WEM race is the next chapter.
 
 ## The Hyperscaler Angle
 
