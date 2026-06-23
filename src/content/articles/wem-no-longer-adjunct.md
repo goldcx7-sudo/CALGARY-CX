@@ -70,5 +70,3 @@ Google CCAI is now the one to watch. AWS has been building, Salesforce and Micro
 Native WEM is not about features. It is about context.
 
 When workforce planning, AI agent activity, customer data, and quality signals all live in one place, the operating model becomes fundamentally more intelligent. The question for enterprise leaders is not whether to adopt native WEM. It is whether your current platform is the right one to build that foundation on.
-
-Your WEM strategy is now a platform decision. Treat it like one.
