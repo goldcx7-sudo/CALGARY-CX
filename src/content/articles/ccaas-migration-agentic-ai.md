@@ -13,7 +13,7 @@ heroImageAlt: "CCaaS migration to agentic AI with Calgary skyline"
 
 We still have a huge set of mid to large enterprises running legacy on-premise contact centers, navigating one of the most important transitions in their history.
 
-Every hyperscaler and CRM platform has now got onto the CCaaS bandwagon in some shape or form. Looking at you, Salesforce.
+Every hyperscaler and CRM platform has now got onto the CCaaS bandwagon in some shape or form.
 
 Voice agentic AI adoption is accelerating across almost every customer segment. Startups and digital-native companies are moving fast. Mid-market organizations are experimenting boldly.
 
