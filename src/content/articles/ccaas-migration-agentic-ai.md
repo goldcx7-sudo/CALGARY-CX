@@ -7,8 +7,8 @@ categoryLabel: "CCaaS"
 readTime: "8 min read"
 author: "JP Sivasubramaniam"
 featured: false
-heroImage: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80"
-heroImageAlt: "Contact center agents working with modern cloud technology"
+heroImage: "/images/ccaas-migration-hero.png"
+heroImageAlt: "CCaaS migration to agentic AI with Calgary skyline"
 ---
 
 We still have a huge set of mid to large enterprises running legacy on-premise contact centers, navigating one of the most important transitions in their history.
