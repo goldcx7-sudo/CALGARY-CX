@@ -7,8 +7,8 @@ categoryLabel: "CX Strategy & Operations"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: false
-heroImage: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80"
-heroImageAlt: "CX Observability dashboard monitoring customer experience and Voice AI operations"
+heroImage: "/images/cx-observability-hero.svg"
+heroImageAlt: "CX Observability: where IT signals and business outcomes finally meet"
 ---
 
 For years, contact center monitoring meant watching infrastructure.
