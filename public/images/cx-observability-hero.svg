@@ -1,0 +1,85 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0f14"/>
+      <stop offset="0.6" stop-color="#10141c"/>
+      <stop offset="1" stop-color="#0b0e15"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="vfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f43f5e" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f43f5e" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f43f5e" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="spikeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f43f5e" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f43f5e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="topGlow" cx="0.2" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+    <filter id="softer" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#topGlow)"/>
+  <g stroke="#1b212c" stroke-width="1">
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="0" y1="440" x2="1200" y2="440"/>
+    <g opacity="0.45">
+      <line x1="150" y1="170" x2="150" y2="500"/>
+      <line x1="300" y1="170" x2="300" y2="500"/>
+      <line x1="450" y1="170" x2="450" y2="500"/>
+      <line x1="600" y1="170" x2="600" y2="500"/>
+      <line x1="750" y1="170" x2="750" y2="500"/>
+      <line x1="900" y1="170" x2="900" y2="500"/>
+      <line x1="1050" y1="170" x2="1050" y2="500"/>
+    </g>
+  </g>
+  <rect x="753" y="120" width="4" height="400" fill="url(#vfade)"/>
+  <circle cx="755" cy="320" r="170" fill="url(#spikeGlow)"/>
+  <path d="M0,328 L120,326 L200,330 L300,324 L400,331 L500,323 L600,329 L700,326 L755,300 L770,360 L820,328 L900,330 L1000,326 L1100,329 L1200,327" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.18" filter="url(#softer)"/>
+  <path d="M0,312 L150,314 L280,309 L420,316 L560,310 L700,314 L755,250 L780,400 L830,312 L950,315 L1080,311 L1200,313" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.15" filter="url(#softer)"/>
+  <path d="M0,322 L90,322 L120,319 L160,323 L210,316 L260,327 L300,319 L340,323 L380,308 L420,331 L460,300 L500,331 L540,313 L600,319 L660,321 L700,323 L730,311 L754,128 L776,510 L796,300 L820,331 L860,315 L900,323 L950,317 L1000,325 L1050,319 L1110,322 L1200,321" fill="none" stroke="url(#signal)" stroke-width="3.5" stroke-linejoin="round" filter="url(#soft)"/>
+  <path d="M0,322 L90,322 L120,319 L160,323 L210,316 L260,327 L300,319 L340,323 L380,308 L420,331 L460,300 L500,331 L540,313 L600,319 L660,321 L700,323 L730,311 L754,128 L776,510 L796,300 L820,331 L860,315 L900,323 L950,317 L1000,325 L1050,319 L1110,322 L1200,321" fill="none" stroke="url(#signal)" stroke-width="1.6" stroke-linejoin="round"/>
+  <g fill="#38bdf8" fill-opacity="0.55">
+    <circle cx="160" cy="323" r="2.5"/>
+    <circle cx="380" cy="308" r="2.5"/>
+    <circle cx="600" cy="319" r="2.5"/>
+    <circle cx="900" cy="323" r="2.5"/>
+    <circle cx="1110" cy="322" r="2.5"/>
+  </g>
+  <circle cx="754" cy="128" r="6" fill="#f43f5e"/>
+  <circle cx="754" cy="128" r="11" fill="none" stroke="#f43f5e" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="772" y="120" fill="#f87171" font-size="14" font-weight="600" letter-spacing="0.4">CSAT down - response latency +600ms</text>
+  <text x="772" y="140" fill="#7f5560" font-size="11" letter-spacing="0.4">one model deploy - correlated across both worlds</text>
+  <text x="60" y="92" fill="#f4f6fa" font-size="54" font-weight="700" letter-spacing="-1">CX Observability</text>
+  <text x="60" y="132" fill="#9aa6b6" font-size="20" font-weight="400">Where IT signals and business outcomes finally meet.</text>
+  <g font-size="11" letter-spacing="1.2">
+    <rect x="1000" y="44" width="140" height="27" rx="13.5" fill="#38bdf8" fill-opacity="0.06" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <text x="1070" y="62" fill="#7dd3fc" text-anchor="middle">IT OPERATIONS</text>
+    <rect x="1000" y="81" width="140" height="27" rx="13.5" fill="#a78bfa" fill-opacity="0.06" stroke="#a78bfa" stroke-opacity="0.45"/>
+    <text x="1070" y="99" fill="#c4b5fd" text-anchor="middle">BUSINESS ASSURANCE</text>
+  </g>
+  <g font-size="11" letter-spacing="2.5" fill="#6b7686">
+    <line x1="60" y1="548" x2="120" y2="548" stroke="#2dd4bf" stroke-width="2.5"/>
+    <text x="60" y="572">01 - SERVERS</text>
+    <text x="60" y="592" fill="#454f5d" font-size="10" letter-spacing="0.5">monitor infrastructure</text>
+    <line x1="470" y1="548" x2="530" y2="548" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="470" y="572">02 - JOURNEYS</text>
+    <text x="470" y="592" fill="#454f5d" font-size="10" letter-spacing="0.5">observe experiences</text>
+    <line x1="900" y1="548" x2="960" y2="548" stroke="#a78bfa" stroke-width="2.5"/>
+    <text x="900" y="572">03 - AI AGENTS</text>
+    <text x="900" y="592" fill="#454f5d" font-size="10" letter-spacing="0.5">observe autonomous work</text>
+  </g>
+</svg>
