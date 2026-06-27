@@ -64,7 +64,7 @@ The real value comes from correlating them.
 
 Imagine seeing: CSAT dropped because response latency increased by 600ms after a model deployment. Or: escalations spiked because an API timeout prevented the AI from accessing customer account information during peak hours.
 
-That is true observability. Not dashboards in silos. Signal connected to outcome.
+That is true observability.
 
 ## The Next Evolution
 
@@ -80,7 +80,7 @@ We used to monitor servers.
 
 Today we observe experiences.
 
-Tomorrow we will observe autonomous workforces made up of humans and AI agents collaborating in real time.
+With Voice AI adoption at peak, we will observe autonomous workforces made up of humans and AI agents collaborating in real time.
 
 Organizations that invest in CX Observability will not just know when something is broken. They will know why, where, who was impacted, and how to fix it before customers notice.
 
