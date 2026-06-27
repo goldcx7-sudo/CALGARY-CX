@@ -7,8 +7,8 @@ categoryLabel: "CX Strategy & Operations"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: false
-heroImage: "/images/ccaas-migration-hero.png"
-heroImageAlt: "CX Observability in the age of Voice AI"
+heroImage: "/images/cx-observability-hero.svg"
+heroImageAlt: "CX Observability: where IT signals and business outcomes finally meet"
 ---
 
 For years, contact center monitoring meant watching infrastructure.
