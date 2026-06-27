@@ -7,7 +7,7 @@ categoryLabel: "CX Strategy & Operations"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: false
-heroImage: "/images/cx-observability-hero.svg"
+heroImage: "/images/cx-observability-hero.png"
 heroImageAlt: "CX Observability: where IT signals and business outcomes finally meet"
 ---
 
