@@ -7,7 +7,7 @@ categoryLabel: "CCaaS"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: false
-heroImage: "/images/applied-ai-acquisitions.svg"
+heroImage: "/images/applied-ai-acquisitions-v2.svg"
 heroImageAlt: "How CRM and CCaaS players are completing the Applied AI circle"
 ---
 
