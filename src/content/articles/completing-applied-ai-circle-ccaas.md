@@ -19,13 +19,13 @@ CCaaS platforms had almost everything. Routing. Orchestration. Omnichannel. Work
 
 Acquisitions in the CX industry have always been interesting to watch. They reveal strategic gaps more honestly than any product roadmap does. When a platform spends real money to acquire a capability, it is telling you what they could not build fast enough on their own, and what they believe the market is about to demand.
 
-Two recent deals make this point clearly. Salesforce's agreement to acquire Fin, and Genesys's completed acquisition of Pinkfish, are both bets on the same strategic shift: customer service AI is moving from answering questions to taking governed action across enterprise systems.
+Two recent deals make this point clearly. Salesforce's agreement to acquire Fin.ai, and Genesys's completed acquisition of Pinkfish, are both bets on the same strategic shift: customer service AI is moving from answering questions to taking governed action across enterprise systems.
 
 But the two buyers are solving different gaps.
 
-## Salesforce and Fin
+## Salesforce and Fin.ai
 
-Salesforce is buying a scaled, high-performing customer agent and vertical AI stack to strengthen Agentforce in service workflows, particularly where customers want faster deployment and measurable resolution outcomes. The gap Salesforce is closing is execution speed and vertical depth. Fin brings proven AI resolution performance at scale, which gives Agentforce Contact Center a credible answer to enterprises asking not just "can your AI handle this?" but "can it resolve it at the rate we need?"
+Salesforce is acquiring a scaled, high-performing customer agent and vertical AI stack to strengthen Agentforce in service workflows, particularly where customers want faster deployment and measurable resolution outcomes. The gap Salesforce is closing is execution speed and vertical depth. Fin brings proven AI resolution performance at scale, which gives Agentforce Contact Center a credible answer to enterprises asking not just "can your AI handle this?" but "can it resolve it at the rate we need?"
 
 ## Genesys and Pinkfish
 
