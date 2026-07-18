@@ -49,7 +49,7 @@ CCaaS sits at the interaction layer, voice, chat, email, SMS, WhatsApp, video. A
 
 But in between customer intent and enterprise execution, there has always been a gap. The outcome orchestrator, the layer that handles business state, AI decision execution, enterprise workflow, governance, and outcome completion, has been the missing piece.
 
-![How CRM and CCaaS players are completing the Applied AI circle through strategic acquisitions](/images/applied-ai-acquisitions.svg)
+![The layered CCaaS to Applied AI architecture: interaction layer, control plane, outcome orchestrator, enterprise systems](/images/ccaas-applied-ai-architecture.png)
 
 Most platforms conversed with customers. Fewer could complete work for them.
 
