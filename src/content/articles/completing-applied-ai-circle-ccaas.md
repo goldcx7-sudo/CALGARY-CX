@@ -17,7 +17,7 @@ CCaaS platforms had almost everything. Routing. Orchestration. Omnichannel. Work
 
 That gap is now being closed. And the acquisitions happening right now are the clearest signal of where the industry is heading.
 
-## Why Acquisitions Tell the Real Story
+## Interesting Acquisitions to Observe
 
 Acquisitions in the CX industry have always been interesting to watch. They reveal strategic gaps more honestly than any product roadmap does. When a platform spends real money to acquire a capability, it is telling you what they could not build fast enough on their own, and what they believe the market is about to demand.
 
