@@ -19,7 +19,7 @@ CCaaS platforms had almost everything. Routing. Orchestration. Omnichannel. Work
 
 ## Interesting Acquisitions to Observe
 
-Acquisitions in the CX industry have always been interesting to watch. They reveal strategic gaps more honestly than any product roadmap does. When a platform spends real money to acquire a capability, it is telling you what they could not build fast enough on their own, and what they believe the market is about to demand.
+Acquisitions in the CX industry have always been interesting to watch. They reveal strategic gaps more honestly than any product roadmap does, and also show where consumers are heading. When a platform spends real money to acquire a capability, it is telling you what they could not build fast enough on their own, and what they believe the market is about to demand.
 
 Two recent deals make this point clearly. Salesforce's agreement to acquire Fin.ai, and Genesys's completed acquisition of Pinkfish, are both bets on the same strategic shift: customer service AI is moving from answering questions to taking governed action across enterprise systems.
 
