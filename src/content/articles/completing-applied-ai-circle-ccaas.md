@@ -15,8 +15,6 @@ Voice AI and Applied AI continue to be the control plane of customer experience.
 
 CCaaS platforms had almost everything. Routing. Orchestration. Omnichannel. Workforce management. Analytics. Recently Voice AI. But the one thing missing was an outcome orchestrator, a layer that could actually execute the work end to end across enterprise systems.
 
-That gap is now being closed. And the acquisitions happening right now are the clearest signal of where the industry is heading.
-
 ## Interesting Acquisitions to Observe
 
 Acquisitions in the CX industry have always been interesting to watch. They reveal strategic gaps more honestly than any product roadmap does. When a platform spends real money to acquire a capability, it is telling you what they could not build fast enough on their own, and what they believe the market is about to demand.
@@ -51,7 +49,7 @@ CCaaS sits at the interaction layer, voice, chat, email, SMS, WhatsApp, video. A
 
 But in between customer intent and enterprise execution, there has always been a gap. The outcome orchestrator, the layer that handles business state, AI decision execution, enterprise workflow, governance, and outcome completion, has been the missing piece.
 
-![The layered CCaaS to Applied AI architecture — from interaction layer through control plane to outcome orchestrator and enterprise systems](/images/ccaas-applied-ai-architecture.png)
+![How CRM and CCaaS players are completing the Applied AI circle through strategic acquisitions](/images/applied-ai-acquisitions.svg)
 
 Most platforms conversed with customers. Fewer could complete work for them.
 
