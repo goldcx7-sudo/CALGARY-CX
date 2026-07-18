@@ -13,7 +13,7 @@ heroImageAlt: "How CRM and CCaaS players are completing the Applied AI circle"
 
 Every CX provider is in a race to own the AI layer. And CX sits at the center of almost every innovative approach emerging right now.
 
-Voice AI and Applied AI continue to be the control plane of customer experience. We have seen agentic advancements accelerating across the board. But there has been a structural gap that most platforms have been quietly navigating around.
+Voice AI/Applied AI continue to be the control plane of customer experience. We have seen agentic advancements accelerating across the board. But there has been a structural gap that most platforms have been quietly navigating around.
 
 CCaaS platforms had almost everything. Routing. Orchestration. Omnichannel. Workforce management. Analytics. Recently Voice AI. But the one thing missing was an outcome orchestrator, a layer that could actually execute the work end to end across enterprise systems.
 
