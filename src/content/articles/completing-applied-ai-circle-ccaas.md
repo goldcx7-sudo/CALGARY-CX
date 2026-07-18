@@ -7,8 +7,8 @@ categoryLabel: "CCaaS"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: false
-heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
-heroImageAlt: "Applied AI and CCaaS platform architecture"
+heroImage: "/images/ccaas-applied-ai-architecture.png"
+heroImageAlt: "CCaaS to Applied AI architecture: interaction layer, control plane, outcome orchestrator, enterprise systems"
 ---
 
 Every CX provider is in a race to own the AI layer. And CX sits at the center of almost every innovative approach emerging right now.
