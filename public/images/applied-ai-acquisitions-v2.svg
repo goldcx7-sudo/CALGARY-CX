@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" font-family="'Helvetica Neue', Arial, sans-serif">
+
+  <rect width="1000" height="600" fill="#ffffff"/>
+
+  <text x="30" y="105" font-size="11" font-weight="600" fill="#888" letter-spacing="1.5">CRM PLAY</text>
+
+  <rect x="100" y="115" width="180" height="100" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="190" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#111">CRMs</text>
+  <text x="190" y="183" text-anchor="middle" font-size="11" fill="#666">System of Record</text>
+
+  <line x1="282" y1="165" x2="330" y2="165" stroke="#555" stroke-width="1.5"/>
+  <polygon points="330,160 342,165 330,170" fill="#555"/>
+
+  <rect x="344" y="115" width="180" height="100" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="434" y="153" text-anchor="middle" font-size="13" font-weight="600" fill="#111">Adds own</text>
+  <text x="434" y="172" text-anchor="middle" font-size="13" font-weight="600" fill="#111">CCaaS</text>
+  <text x="434" y="195" text-anchor="middle" font-size="11" fill="#666">Native channels</text>
+
+  <line x1="526" y1="165" x2="574" y2="165" stroke="#555" stroke-width="1.5"/>
+  <polygon points="574,160 586,165 574,170" fill="#555"/>
+
+  <rect x="588" y="115" width="180" height="100" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="678" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Adds Customer Service</text>
+  <text x="678" y="157" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Full Workflow</text>
+  <text x="678" y="174" text-anchor="middle" font-size="12" font-weight="600" fill="#111">AI Agents</text>
+  <text x="678" y="197" text-anchor="middle" font-size="11" fill="#888">Fin.ai</text>
+
+  <line x1="80" y1="310" x2="920" y2="310" stroke="#ddd" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <text x="30" y="355" font-size="11" font-weight="600" fill="#888" letter-spacing="1.5">CCaaS PLAY</text>
+
+  <rect x="100" y="370" width="180" height="110" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="190" y="418" text-anchor="middle" font-size="14" font-weight="600" fill="#111">CCaaS</text>
+  <text x="190" y="441" text-anchor="middle" font-size="11" fill="#666">Interaction Layer</text>
+
+  <line x1="282" y1="425" x2="330" y2="425" stroke="#555" stroke-width="1.5"/>
+  <polygon points="330,420 342,425 330,430" fill="#555"/>
+
+  <rect x="344" y="370" width="180" height="110" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="434" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Adds Voice AI</text>
+  <text x="434" y="420" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Mini CRM</text>
+  <text x="434" y="437" text-anchor="middle" font-size="12" font-weight="600" fill="#111">+ Agentic Layer</text>
+  <text x="434" y="460" text-anchor="middle" font-size="11" fill="#888">AI Studio, AVA etc.</text>
+
+  <line x1="526" y1="425" x2="574" y2="425" stroke="#555" stroke-width="1.5"/>
+  <polygon points="574,420 586,425 574,430" fill="#555"/>
+
+  <rect x="588" y="370" width="180" height="110" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="678" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Adds Outcome</text>
+  <text x="678" y="420" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Workflow</text>
+  <text x="678" y="437" text-anchor="middle" font-size="12" font-weight="600" fill="#111">Orchestrator</text>
+  <text x="678" y="460" text-anchor="middle" font-size="11" fill="#888">Pinkfish</text>
+
+</svg>
