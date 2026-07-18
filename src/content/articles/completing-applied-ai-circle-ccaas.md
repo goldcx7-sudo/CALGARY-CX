@@ -7,6 +7,8 @@ categoryLabel: "CCaaS"
 readTime: "7 min read"
 author: "JP Sivasubramaniam"
 featured: false
+heroImage: "/images/applied-ai-acquisitions.svg"
+heroImageAlt: "How CRM and CCaaS players are completing the Applied AI circle"
 ---
 
 Every CX provider is in a race to own the AI layer. And CX sits at the center of almost every innovative approach emerging right now.
